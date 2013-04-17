@@ -9,15 +9,42 @@
 #import "SPOViewController.h"
 
 @interface SPOViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *etiqueta;
+@property (weak, nonatomic) IBOutlet UITextField *campoTexto;
 
 @end
 
 @implementation SPOViewController
+- (IBAction)Cambiartextoetiquta:(UIButton *)sender
+{
+	self.etiqueta.text=@"Hola git Hub. Voy a borrar la etiqueta";
+}
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+	self.etiqueta.text=textField.text;
+	[textField resignFirstResponder];
+	return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+	self.etiqueta.text=textField.text;
+	[textField resignFirstResponder];
+
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	self.etiqueta.text=textField.text;
+	[textField resignFirstResponder];
+	return YES;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	//self.campoTexto.delegate=self; Done in StoryBoard
+	
 }
 
 - (void)didReceiveMemoryWarning

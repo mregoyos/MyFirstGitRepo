@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPOViewController : UIViewController
+@interface SPOViewController : UIViewController <UITextFieldDelegate>
 
 @end
