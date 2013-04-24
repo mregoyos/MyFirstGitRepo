@@ -17,7 +17,7 @@
 @implementation SPOViewController
 - (IBAction)Cambiartextoetiquta:(UIButton *)sender
 {
-	self.etiqueta.text=@"Hola git Hub. Voy a borrar la etiqueta";
+	self.etiqueta.text=@"Hola git. Voy a borrar la etiqueta, desde botón";
 }
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
